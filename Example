@@ -1,0 +1,42 @@
+
+public class Example {
+
+	public static void main(String[] args) {
+		
+		System.out.println(Byte.MAX_VALUE);
+		System.out.println(Short.MAX_VALUE);
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Long.MAX_VALUE);
+		System.out.println(Float.MAX_VALUE);
+		System.out.println(Double.MAX_VALUE);
+		
+		byte bigByte = 50;
+		short bigShort = 15000;
+		int bigInt = 100000;
+		long bigLong = 500000000;
+		float bigFloat = 5974.842f;
+		double bigDouble = 100.8;
+		
+		// You can cast (convert) primitive type values to other value types
+		// The short value bigShort is cast (converted) to a short value from bigFloat, a float value
+		bigShort = (short)bigFloat;
+		System.out.println(bigShort);
+		
+		// The long value bigLong is cast (converted) to an int value from bigDouble, a double value
+		bigLong = (int)bigDouble;
+		System.out.println(bigLong);
+		
+		// You do not have to use a variable when casting from, you can type in the value
+		// Here an int value bigInt is cast (converted) to an int value from a typed in float value
+		bigInt = (int)554.234f;
+		System.out.println(bigInt);
+		
+		// Beware when casting, make sure the type you are casting to has enough memory to hold what you are casting from
+		// The following won't work as we expect it to!!
+        // 500 is too big for a byte. 
+		bigByte = (byte)500;
+		System.out.println(bigByte);
+		
+	}
+
+}
